@@ -1,0 +1,27 @@
+<script>
+   
+function del_user(id){
+  $.ajax({
+   url: '/api/users/'+id,
+   type: 'DELETE',
+   contentType: "application/x-www-form-urlencoded",
+   success: function(data) {
+    //do something
+  }});
+location.reload();
+
+}
+function update_user(id){
+  $.ajax({
+   url: '/api/users/'+id,
+   type: 'PUT',
+   contentType: "application/x-www-form-urlencoded",
+   success: function(data) {
+    //do something
+  }});
+location.reload();
+
+}
+</script>
+</body>
+</html>

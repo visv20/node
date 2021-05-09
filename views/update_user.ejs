@@ -1,0 +1,56 @@
+<%- include('include/_header')%>
+
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex-justify-between">
+            <div class="filter">
+                <a href="/"><i class="fas fa-long-arrow-alt-left"></i>ALL Users</a>
+            </div>
+        </div>
+    </div>
+    <div class="form-title text-centre">
+        <h2 class="text-dark"style="text-align:center" >Update Application</h2>
+    </div>
+    <form method="POST" id="update_user" action="/api/user/<%=data._id%>">
+        <div class="new_user">
+
+            <div class="form-group">
+                <label for="name" class="text-light">Name</label>
+                <input type="text" name="name" value="<%=data.name%>" placeholder="FULL NAME">
+
+            </div>
+
+            <div class="form-group">
+                <label for="Email" class="text-light">Email</label>
+                <input type="email" name="email" value="<%=data.email%>" placeholder="abc@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="Mobile" class="text-light">Mobile Number</label>
+                <input type="text" name="phone" value="<%=data.phone%>" placeholder="07982739172">
+                
+            </div>
+
+            <div class="form-group">
+                <label for="Address" class="text-light">Address</label>
+                <input type="text" name="address" value="<%=data.address%>">
+                
+            </div>
+
+            <div class="form-group">
+                <label for="you" class="text-light">tell us about yourself</label>
+                <input type="text" name="you" value="<%=data.you%>" placeholder="abc@email.com">
+                
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn text-dark update" style="width: 200px;">APPLY</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+   
+</main>
+
+<%- include('include/_footer')%>
